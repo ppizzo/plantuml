@@ -17,11 +17,15 @@ $ docker build -t ppizzo/plantuml .
 ```
 
 ## Usage
-The image is stateless, just run it by exposing the `8080` port on the host and access it using a web browser:
+The image is stateless, just run it by exposing the `8080` port on the host:
 ```bash
 $ docker run -d --name plantuml -p 8080:8080 ppizzo/plantuml
 ```
-If you're running Swarm, Kubernetes or another orchestrated enterprise-grade platform, please create the required deployment descriptors.
+and use a web browser to access the `/plantuml` context root at the following local URL (your actual URL may vary based on your setup):
+
+[http://localhost:8080/plantuml](http://localhost:8080/plantuml)
+
+If you're running Swarm, Kubernetes or another orchestrated enterprise-grade platform, please create the required deployment descriptors. If running on a remote engine, you must adapt the above URL to your setup (i.e.: if using a load balancer, a reverse proxy, a direct engine connection, etc.).
 
 This repository contains a basic `docker-compose.yml` you can use on a stand alone Docker engine or on a Swarm cluster.
 
