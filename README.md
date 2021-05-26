@@ -1,4 +1,7 @@
 # PlantUML
+
+![PlantUML](img/plantuml-logo.png)
+
 ## Description
 Docker image with PlantUML.
 
