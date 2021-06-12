@@ -6,5 +6,7 @@ services:
     build:
       context: ./
     restart: always
+    environment:
+      - ALLOW_PLANTUML_INCLUDE=true
     ports:
       - "8080:8080"
